@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Writer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Story Writer</h1>
+        </header>
+        <main>
+            <div class="story-list">
+                <h2>Mis Historias</h2>
+                <ul id="storyList"></ul>
+                <button id="newStoryBtn" class="btn">Nueva Historia</button>
+            </div>
+            <div class="story-editor">
+                <input type="text" id="storyTitle" placeholder="Título de la historia" class="large-input">
+                <div id="chapters"></div>
+                <button id="addChapterBtn" class="btn">Añadir Capítulo</button>
+                <button id="saveStoryBtn" class="btn">Guardar Historia</button>
+            </div>
+        </main>
+    </div>
+    <div id="storyReader" class="story-reader">
+        <button id="closeReader" class="close-btn">&times;</button>
+        <div id="readerContent"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

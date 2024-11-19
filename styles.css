@@ -1,0 +1,245 @@
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5e0d3, #f9d5e5);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(to right, #e6b980, #eacda3);
+    color: #4a4a4a;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.story-list, .story-editor {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn {
+    background: linear-gradient(to right, #f6d365, #fda085);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #f6b365, #fd9085);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.large-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.9em;
+    box-sizing: border-box;
+}
+
+.chapter {
+    margin-bottom: 30px;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.chapter-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.chapter-content {
+    width: 100%;
+    min-height: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.17em;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.image-placeholder {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    margin: 15px 0;
+    border-radius: 10px;
+}
+
+.story-reader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5e0d3, #f9d5e5);
+    overflow-y: auto;
+    display: none;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: #ff4136;
+    cursor: pointer;
+}
+
+#storyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#storyList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#storyList li:hover {
+    background-color: #f0f0f0;
+}
+
+.story-title {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.delete-btn {
+    background-color: #ff4136;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#readerContent {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#readerContent h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#readerContent .chapter {
+    margin-bottom: 40px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+#readerContent .chapter-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#readerContent .chapter-content {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+#readerContent img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .story-list, .story-editor {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .large-input {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .chapter {
+        padding: 15px;
+    }
+
+    .story-reader {
+        padding: 20px;
+    }
+
+    #readerContent {
+        padding: 20px;
+    }
+}
